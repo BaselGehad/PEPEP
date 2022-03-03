@@ -215,7 +215,7 @@ header .container .fa-plus {
 .content .homeland .container img {
   width: 300px;
   position: relative;
-  animation: upanddown 3s linear infinite;
+  animation: upanddown 5s linear infinite;
 }
 @keyframes upanddown {
   0% ,  100%  {
