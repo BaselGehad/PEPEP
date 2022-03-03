@@ -1,0 +1,396 @@
+/* start global rules */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+:root {
+  /* --main-color: rgb(18, 27, 138); */
+  --main-color: #0066f0;
+  /* --main-color: rgb(65, 3, 235); */
+  --sec-color: gold;
+  /* --sec-color: #0066f0; */
+  --third-color: rgb(219, 219, 219);
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  padding: 15px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+/* ------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------ */
+/* start the header */
+header {
+  background-color: var(--main-color);
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .container .logo {
+  color: #fff;
+  font-size: 27px;
+  user-select: none;
+}
+header .container .fa-bars {
+  color: #fff;
+  font-size: 27px;
+  cursor: pointer;
+}
+header .container .fa-plus {
+  color: #fff;
+  font-size: 27px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  display: none;
+}
+.links {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: -100vh;
+  left: 0px;
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 1;
+}
+.links ul {
+  width: 100%;
+}
+.links ul li {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.links ul li i {
+  font-size: 30px;
+}
+/* end the header */
+/* ------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* start content */
+/* start semesters */
+.content {
+  padding-top: 50px;
+}
+.content .semesters {
+  display: none;
+}
+.content .semesters .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.content .semesters .container .show {
+  width: 200px;
+  height: 50px;
+  background-color: var(--main-color);
+  color: #fff;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+.content .semesters .container .semester {
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .semesters .container .semester p {
+  margin: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  text-align: center;
+  color: white;
+}
+.content .semesters .container .semester ul {
+  width: 100%;
+}
+.content .semesters .container .semester ul li {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  flex-direction: row-reverse;
+  font-weight: bold;
+}
+.content .semesters .container .semester ul li span {
+  background-color: rgb(221, 221, 221);
+  padding: 5px;
+  margin-right: 30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+}
+.active {
+  background-color: var(--sec-color);
+}
+@media (max-width: 767px) {
+  .content .semesters .container {
+    width: 100%;
+    padding: 0;
+  }
+  .content .semesters .container .semester ul li {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+/* end semesters */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* start home land */
+.content .homeland {
+  display: flex;
+}
+.content .homeland .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+}
+.content .homeland .container img {
+  width: 300px;
+  position: relative;
+  animation: upanddown 3s linear infinite;
+}
+@keyframes upanddown {
+  0% ,  100%  {
+    top: 0px;
+  }
+  50% {
+    top: 50px;
+  }
+}
+/* end home land */
+/* --------------------------------------------------------------------------------- */
+/* ____________________________________________________________________________________ */
+/* GPA => */
+#grade {
+  display: none;
+  width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+}
+#hours {
+  display: none;
+  width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px;
+}
+.content .gpap {
+  min-height: calc(100vh - 112px);
+  display: none;
+}
+.content .gpap .gpaheader {
+  background-color: var(--main-color);
+  margin-top: 11px;
+}
+.content .gpap .gpaheader .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px 15px;
+}
+.content .gpap #container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.content .gpap .gpaheader .container .showgpa {
+  color: #fff;
+  border: #fff solid 1px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.content .gpap .gpaheader .container  button {
+  border: #fff solid 1px;
+  border-radius: 5px ;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: var(--main-color);
+}
+.content .gpap .gpaheader .container :nth-child(1) {
+  position: absolute;
+  top: 65px;
+  border: none;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: var(--main-color);
+  color: #fff;
+}
+.content .gpap .gpaheader .container :nth-child(2) {
+  display: none;
+}
+.content .gpap .container .subject {
+  width: 95%;
+  background-color: var(--main-color);
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+.content .gpap .container .subject .gradelable {
+  color: #fff;
+}
+.content .gpap .container .subject .hourslable {
+  color: #fff;
+}
+.gpap .container .subject .deletesubject {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #0066f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* GPA. */
+/* ____________________________________________________________________________________ */
+/* ____________________________________________________________________________________ */
+/* About => */
+.aboutp {
+  display: none;
+}
+.aboutp .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 100px);
+}
+.aboutp .container img {
+  width: 300px;
+}
+/* About. */
+/* ____________________________________________________________________________________ */
+/* ____________________________________________________________________________________ */
+/* developer => */
+.developerp {
+  display: none;
+}
+.developerp .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 100px);
+}
+.developerp .container img {
+  width: 300px;
+}
+/* developer. */
+/* ____________________________________________________________________________________ */
+/* end content */
+/* ------------------------------------------------------------------------------------ */
+/* start footer */
+footer {
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+footer .container {
+  padding: 12px;
+}
+footer .container p {
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .container p i:nth-child(1) {
+  color: red;
+}
+/* end footer */
